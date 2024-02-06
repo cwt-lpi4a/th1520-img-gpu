@@ -1,0 +1,5 @@
+pkg
+src
+thead-gles-addons
+*.pkg.tar.zst
+.shaders
