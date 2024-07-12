@@ -2,7 +2,7 @@
 _reponame="thead-gles-addons"
 pkgname="th1520-img-gpu"
 pkgver=r4.8d02e2c
-pkgrel=1
+pkgrel=2
 pkgdesc="TH1520 Imagination PowerVR GPU with OpenGL ES, Vulkan, and OpenCL for Arch Linux"
 arch=('riscv64')
 url="https://github.com/revyos/${_reponame}"
@@ -21,6 +21,8 @@ pkgver() {
 package() {
   cd "$srcdir/$_reponame/addons"
 
+  install -Dm644 etc/powervr.ini \
+    "${pkgdir}/etc/powervr.ini"
   install -Dm644 etc/OpenCL/vendors/IMG.icd \
     "${pkgdir}/etc/OpenCL/vendors/IMG.icd"
   install -Dm644 etc/vulkan/icd.d/icdconf.json \
@@ -55,8 +57,8 @@ package() {
     "${pkgdir}/usr/bin/pvrlogdump"
   install -Dm755 usr/bin/pvrlogsplit \
     "${pkgdir}/usr/bin/pvrlogsplit"
-  install -Dm755 usr/bin/pvrsrvctl \
-    "${pkgdir}/usr/bin/pvrsrvctl"
+  #install -Dm755 usr/bin/pvrsrvctl \
+  #  "${pkgdir}/usr/bin/pvrsrvctl"
   install -Dm755 usr/bin/pvrtld \
     "${pkgdir}/usr/bin/pvrtld"
   install -Dm755 usr/bin/rgx_blit_test \
