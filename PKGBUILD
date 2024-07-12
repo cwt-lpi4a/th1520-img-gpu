@@ -1,7 +1,7 @@
 # Maintainer: Chaiwat Suttipongsakul <cwt@bashell.com>
 _reponame="thead-gles-addons"
 pkgname="th1520-img-gpu"
-pkgver=r2.c4a8ad6
+pkgver=r4.8d02e2c
 pkgrel=1
 pkgdesc="TH1520 Imagination PowerVR GPU with OpenGL ES, Vulkan, and OpenCL for Arch Linux"
 arch=('riscv64')
